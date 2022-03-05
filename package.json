@@ -5,12 +5,22 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+		"release": "standard-version",
+		"release:minor": "yarn release -- --release-as minor",
+		"release:path": "yarn release -- --release-as path"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
+		"cz-conventional-changelog": "3.3.0",
     "postcss": "^8.4.7",
+		"standard-version": "^9.3.2",
     "tailwindcss": "^3.0.23",
     "vite": "^2.8.0"
-  }
+  },
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	}
 }
