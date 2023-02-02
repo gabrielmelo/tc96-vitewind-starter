@@ -9,7 +9,7 @@ module.exports = defineConfig({
 		outDir: path.join(__dirname, 'dist'),
 
 		rollupOptions: {
-			input: path.join(__dirname, './src/main.js'),
+			input: path.join(__dirname, './main.js'),
 			output: {
 				entryFileNames: '[name].js',
 				chunkFileNames: '[name].js',
