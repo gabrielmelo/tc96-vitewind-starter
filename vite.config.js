@@ -1,20 +1,16 @@
-import { defineConfig } from 'vite';
-import path from 'path';
+import { defineConfig } from "vite";
+
+import path from "path";
 
 module.exports = defineConfig({
-
 	build: {
-		manifest: true,
-
-		outDir: path.join(__dirname, 'dist'),
-
 		rollupOptions: {
-			input: path.join(__dirname, './main.js'),
+			input: path.join(__dirname, "./index.html"),
 			output: {
-				entryFileNames: '[name].js',
-				chunkFileNames: '[name].js',
-				assetFileNames: '[name].[ext]'
-			}
+				entryFileNames: "[name].[hash].js",
+				chunkFileNames: "[name].[hash].js",
+				assetFileNames: "assets/[ext]/[name].[hash].[ext]",
+			},
 		},
 	},
 });
